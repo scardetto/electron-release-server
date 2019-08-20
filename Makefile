@@ -20,6 +20,7 @@ build:
 .PHONY: docker-publish build
 docker-publish: build
 	@$(ECS_LOGIN)
+  aws ecr describe-repositories --repository-names ${IMAGE_NAME} || aws ecr create-repository --repository-name ${IMAGE_NAME}
 	docker tag $(IMAGE_NAME) $(FULL_IMAGE)
 	docker push $(FULL_IMAGE)
 
