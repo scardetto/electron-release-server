@@ -1,0 +1,5 @@
+apiVersion: v1
+appVersion: "1.4.3"
+description: A fully featured, self-hosted release server for electron applications, compatible with auto-updater.
+name: electron-release-server
+version: 0.1.0
